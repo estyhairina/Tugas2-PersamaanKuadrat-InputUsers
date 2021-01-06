@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tugas 2 Pertemuan 10</title>
+</head>
+
+<style>
+body {
+	background-color: linen;
+}
+
+h1 {
+  color: maroon;
+  text-align: center;
+}
+
+h3 {
+	font-family: verdana;
+}
+
+p {
+  font-family: verdana;
+}
+
+form {
+	font-family: verdana;
+	background-color: linen;
+}
+button {
+	font-family: verdana;
+	background-color: lightblue;
+}
+div {
+	font-family: verdana;
+	background-color: lightblue;
+}
+
+
+</style>
+<body>
+
+<h1 style="text-align:center; font-family:consolas;" title="Esty
+Hairina(1910131320007)">Menyelesaikan Persamaan Kuadratik</h1><hr>
+<h3>Nama &nbsp : Esty Hairina<br>NIM &nbsp &nbsp : 1910131320007</h3>
+<p id="home"></p>
+<p>Rumus persamaan kuadrat : ax<sup>2</sup> + bx + c = 0</p>
+<form>
+	<label for="Nilaia">Nilai a :</label>
+	<input type="text" id="a" size=5> <br><br>
+	<label for="Nilaib">Nilai b :</label>
+	<input type="text" id="b" size=5> <br><br>
+	<label for="Nilaic">Nilai c :</label>
+	<input type="text" id="c" size=5> <br><br>
+	<button type="button" onclick="FunctionKuadrat()">Hitung</button>
+	<button type="button" onclick="reset()">Hapus</button>
+</form>
+
+<div>
+<script>
+	function FunctionKuadrat(){
+		var a=document.getElementById("a").value;
+		var b=document.getElementById("b").value;
+		var c=document.getElementById("c").value;
+
+		var det= Math.pow(b,2)-(4*a*c);
+
+		if (det>0) {
+			x1 =(-b + Math.sqrt(det))/2*a;
+			x2 =(-b - Math.sqrt(det))/2*a;
+		}
+		else{
+			window.alert("Nilai x1 dan x2 tidak dapat dihitung");
+		}
+			document.write("Rumus persamaan kuadrat : ax<sup>2</sup> + bx + c = 0<br><br>")
+			document.write("Diketahui :<br>a = "+a+"<br>")
+			document.write("b = "+b+"<br>")
+			document.write("c = "+c+"<br><br>")
+			document.write("Hasil : <br>")
+			document.write("Determinan = "+det+"<br>")
+			document.write("x1 = "+x1+"<br>")
+			document.write("x2 = "+x2+"<br>")
+
+
+	}
+</script>
+</div>
+
+</body>
+</html>
